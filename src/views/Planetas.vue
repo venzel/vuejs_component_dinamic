@@ -6,7 +6,9 @@
             <button @click="option('venus')">Venus</button>
         </div>
         <div>
-            <component :is="component_selected" />
+            <keep-alive>
+                <component :is="component_selected" />
+            </keep-alive>
         </div>
     </div>
 </template>
